@@ -4,7 +4,6 @@
 \alias{periodic}
 \alias{periodic.default}
 \alias{periodic.data.frame}
-\alias{periodic.Layer}
 \title{Add or remove periodic variables}
 \usage{
 periodic(object, ...)
@@ -12,8 +11,6 @@ periodic(object, ...)
 \method{periodic}{default}(object, period, ...)
 
 \method{periodic}{data.frame}(object, ...)
-
-\method{periodic}{Layer}(object, ...)
 }
 \arguments{
 \item{object}{the object to coherce to periodic}

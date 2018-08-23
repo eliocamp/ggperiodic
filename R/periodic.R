@@ -85,14 +85,6 @@ periodic.data.frame <- function(object, ...) {
 
 
 #' @export
-#' @rdname periodic
-periodic.Layer <- function(object, ...) {
-  cols <- as.list(substitute(list(...))[-1])
-  structure(list(layer = object, cols = cols), class = "periodic_layer")
-}
-
-
-#' @export
 print.periodic_df <- function(x, ...) {
   NextMethod("print")
   period <- get_period(x)

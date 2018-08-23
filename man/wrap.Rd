@@ -2,12 +2,15 @@
 % Please edit documentation in R/wrap.R
 \name{wrap}
 \alias{wrap}
+\alias{wrap.periodic_df}
 \title{Wrap periodic data to an arbitary range}
 \usage{
-wrap(data, ..., .group = NULL)
+wrap(object, ...)
+
+\method{wrap}{periodic_df}(object, ..., .group = NULL)
 }
 \arguments{
-\item{data}{a periodic data frame}
+\item{object}{a periodic data frame}
 
 \item{...}{name-value pairs of expressions defining range specifications}
 
