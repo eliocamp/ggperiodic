@@ -26,6 +26,9 @@ filter.periodic_df <- function(.data, ...) {
 }
 
 #' @export
+dplyr::filter
+
+#' @export
 #' @importFrom dplyr summarise
 summarise.periodic_df <- function(.data, ...) {
   periods <- get_period(.data)
