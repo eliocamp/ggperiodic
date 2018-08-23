@@ -16,9 +16,9 @@ knitr::opts_chunk$set(
 )
 ```
 
+ggperiodic is a simple package that tries to make plotting periodic data easier. The core idea is that you can specify the *period* that your data represents and then, at plotting, time, you define the range that it should be wrapped around. To see it in action, let's first create some periodic data with period between 0° and 360°:
+
 ```{r}
-library(ggperiodic)
-library(ggplot2)
 x <- seq(0, 360 - 10, by = 10)*pi/180
 y <- seq(-90, 90, by = 10)*pi/180
 
@@ -28,29 +28,46 @@ Z$z <- with(Z, 1.2*sin(x)*0.4*sin(y*2) -
                0.2*sin(4*x)*0.45*cos(2*x))
 Z$x <- Z$x*180/pi
 Z$y <- Z$y*180/pi
+```
 
-Z <- periodic(Z, x = c(0, 360))
+Since the vale of `z` at `x = 0` and at `x = 360` is the same, having both would be redundant and also create bias when computing statistics because the same point would be double counted. But when plotting, there's a problem
 
+```{r}
+library(ggplot2)
 ggplot(Z) +
-  geom_contour(aes(x, y, z = z)) +
+  geom_contour(aes(x, y, z = z, color = ..level..)) +
   coord_polar()
 ```
 
+With ggperiodic you can explicitly specify the period that your data represents and then wrap it around any arbitrary range. By printing, you can see the period of each of the periodic variables. 
 
 ```{r}
-map <- map_data("world")
+library(ggperiodic)
+Z <- periodic(Z, x = c(0, 360))
+head(Z)
+```
 
-ggplot(Z, aes(x, y), x = c(-180, 180)) +
-  geom_contour(aes(z = z)) +
-  geom_path(data = map, aes(long, lat, group = group))
+To manually wrap the data around a range, you can use the same syntax:
+
+```{r}
+wrapped_z <- wrap(Z, x = c(-180, 180))
+range(wrapped_z$x)
+```
+
+This can be done manually, but ggplot2 will do it automatically, by default wrapping the data around the period. 
+
+```{r}
+ggplot(Z) +
+  geom_contour(aes(x, y, z = z, color = ..level..)) +
+  coord_polar()
+```
+
+But it's easy to change the wrapping range using the same syntax. For example, if we want to see three copies of the data
+
+```{r}
+ggplot(Z, x = c(0, 360)*3) +
+  geom_contour(aes(x, y, z = z, color = ..level..))
 ```
 
 
-```{r}
-map <- periodic(map, long = long)
-
-ggplot(Z, aes(x, y)) +
-  geom_contour(aes(z = z)) +
-  geom_path(data = map, aes(long, lat, group = group), long = c(0, 360))
-```
 
