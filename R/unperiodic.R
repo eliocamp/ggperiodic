@@ -3,10 +3,6 @@
 #' @param object the object to remove periodicities
 #' @param ... arguments to methods
 #'
-#' @examples
-#'
-#'
-#'
 #' @export
 unperiodic <- function(object, ...) {
   UseMethod("unperiodic")
