@@ -3,6 +3,8 @@
 
 # ggperiodic
 
+<img src="hex.png" align="right" height=230/>
+
 ggperiodic is an attempt to solve the issue of plotting periodic data in
 ggplot2.
 
@@ -49,6 +51,11 @@ the rest.
 
 ``` r
 library(ggperiodic)
+#> 
+#> Attaching package: 'ggperiodic'
+#> The following object is masked from 'package:stats':
+#> 
+#>     filter
 Z <- periodic(Z, x = c(0, 360))
 
 ggplot(Z, aes(x, y, color = ..level..)) +
