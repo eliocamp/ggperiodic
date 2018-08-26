@@ -15,7 +15,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (d244b95, 2018-08-02)"
-   sodipodi:docname="hex.svg">
+   sodipodi:docname="hex.svg"
+   inkscape:export-filename="/home/elio/Documents/ggperiodic/hex.png"
+   inkscape:export-xdpi="71.98587"
+   inkscape:export-ydpi="71.98587">
   <defs
      id="defs2">
     <style
@@ -551,7 +554,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.5"
      inkscape:cx="553.63986"
-     inkscape:cy="509.38966"
+     inkscape:cy="349.38966"
      inkscape:document-units="mm"
      inkscape:current-layer="g2226"
      showgrid="false"
