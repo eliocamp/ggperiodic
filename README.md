@@ -3,10 +3,11 @@
 
 # ggperiodic
 
-<img src="hex.png" align="right" height=230/>
+<img src="other/hex.png" align="right" height=230/>
 
 ggperiodic is an attempt to solve the issue of plotting periodic data in
-ggplot2.
+ggplot2. It automatically augments your data to wrap it around to any
+arbitrary domain.
 
 ## Installation
 
