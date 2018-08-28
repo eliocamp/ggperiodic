@@ -3,3 +3,4 @@
 ^README\.Rmd$
 ^other
 ^create-methods\.R$
+^\.travis\.yml$
