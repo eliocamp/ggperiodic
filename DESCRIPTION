@@ -17,7 +17,8 @@ Suggests:
     knitr,
     rmarkdown,
     testthat,
-    covr
+    covr,
+    maps
 VignetteBuilder: knitr
 ByteCompile: true
 Encoding: UTF-8
