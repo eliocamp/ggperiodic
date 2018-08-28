@@ -14,11 +14,11 @@ Imports:
     sticky,
     tidyselect
 Suggests: 
-    knitr,
-    rmarkdown,
-    testthat,
     covr,
-    maps
+    knitr,
+    maps,
+    rmarkdown,
+    testthat
 VignetteBuilder: knitr
 ByteCompile: true
 Encoding: UTF-8
