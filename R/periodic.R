@@ -101,9 +101,7 @@ periodic.data.frame <- function(object, ...) {
   if (!inherits(object, "periodic_df")) {
     class(object) <- c("periodic_df", class(object))
   }
-  invisible(object)
-
-
+  object
 }
 
 
