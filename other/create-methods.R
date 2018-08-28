@@ -3,6 +3,7 @@ dplyr.methods <- c("arrange", "distinct", "filter", "group_by",
                    "sample_frac", "sample_n", "slice", "summarise", "ungroup")
 dplyr.joins <- c("inner_join", "left_join", "right_join", "full_join",
                  "semi_join", "anti_join")
+dplyr.joins <- character()
 
 dplyr.exports <- c("filter")
 

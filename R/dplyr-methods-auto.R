@@ -78,84 +78,14 @@ summarise.periodic_df <- function(.data, ...) {
   suppressWarnings(do.call(periodic, c(list(object = .data), periods)))
 }
 
-
-
 #' @export
-#' @method inner_join periodic_df
-#' @importFrom dplyr inner_join
-inner_join.periodic_df <- function(x, y, by = NULL, copy = FALSE, suffix = c(".x", ".y"), ...) {
-  periods.x <- get_period(x)
-  periods.y <- get_period(y)
-  periods <- join(periods.x, periods.y)
-  x <- unperiodic(x)
-  y <- unperiodic(y)
-  j <- NextMethod("inner_join")
-  suppressWarnings(do.call(periodic, c(list(object = j), periods)))
-}
-
-#' @export
-#' @method left_join periodic_df
-#' @importFrom dplyr left_join
-left_join.periodic_df <- function(x, y, by = NULL, copy = FALSE, suffix = c(".x", ".y"), ...) {
-  periods.x <- get_period(x)
-  periods.y <- get_period(y)
-  periods <- join(periods.x, periods.y)
-  x <- unperiodic(x)
-  y <- unperiodic(y)
-  j <- NextMethod("left_join")
-  suppressWarnings(do.call(periodic, c(list(object = j), periods)))
-}
-
-#' @export
-#' @method right_join periodic_df
-#' @importFrom dplyr right_join
-right_join.periodic_df <- function(x, y, by = NULL, copy = FALSE, suffix = c(".x", ".y"), ...) {
-  periods.x <- get_period(x)
-  periods.y <- get_period(y)
-  periods <- join(periods.x, periods.y)
-  x <- unperiodic(x)
-  y <- unperiodic(y)
-  j <- NextMethod("right_join")
-  suppressWarnings(do.call(periodic, c(list(object = j), periods)))
-}
-
-#' @export
-#' @method full_join periodic_df
-#' @importFrom dplyr full_join
-full_join.periodic_df <- function(x, y, by = NULL, copy = FALSE, suffix = c(".x", ".y"), ...) {
-  periods.x <- get_period(x)
-  periods.y <- get_period(y)
-  periods <- join(periods.x, periods.y)
-  x <- unperiodic(x)
-  y <- unperiodic(y)
-  j <- NextMethod("full_join")
-  suppressWarnings(do.call(periodic, c(list(object = j), periods)))
-}
-
-#' @export
-#' @method semi_join periodic_df
-#' @importFrom dplyr semi_join
-semi_join.periodic_df <- function(x, y, by = NULL, copy = FALSE, ...) {
-  periods.x <- get_period(x)
-  periods.y <- get_period(y)
-  periods <- join(periods.x, periods.y)
-  x <- unperiodic(x)
-  y <- unperiodic(y)
-  j <- NextMethod("semi_join")
-  suppressWarnings(do.call(periodic, c(list(object = j), periods)))
-}
-
-#' @export
-#' @method anti_join periodic_df
-#' @importFrom dplyr anti_join
-anti_join.periodic_df <- function(x, y, by = NULL, copy = FALSE, ...) {
-  periods.x <- get_period(x)
-  periods.y <- get_period(y)
-  periods <- join(periods.x, periods.y)
-  x <- unperiodic(x)
-  y <- unperiodic(y)
-  j <- NextMethod("anti_join")
-  suppressWarnings(do.call(periodic, c(list(object = j), periods)))
+#' @method ungroup periodic_df
+#' @importFrom dplyr ungroup
+ungroup.periodic_df <- function(x, ...) {
+  periods <- get_period(.data)
+  .data <- unperiodic(.data)
+  .data <- NextMethod("ungroup")
+  suppressWarnings(do.call(periodic, c(list(object = .data), periods)))
 }
 
 #' @export

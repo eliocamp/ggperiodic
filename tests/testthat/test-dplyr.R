@@ -28,7 +28,12 @@ return_periodic <- list(
   summarise(df, x = mean(x)),
   summarise(group_by(df, x), y = mean(y)),
   ungroup(group_by(df, x)),
-  ungroup(group_by(df, y))
+  ungroup(group_by(df, y)),
+  sample_n(df, 1),
+  sample_n(df, 0),
+  sample_frac(df, 1/2),
+  sample_frac(df, 0)
+
 )
 
 are_periodic <- unlist(lapply(return_periodic, is.periodic))
