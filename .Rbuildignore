@@ -4,3 +4,4 @@
 ^other
 ^create-methods\.R$
 ^\.travis\.yml$
+^codecov\.yml$
