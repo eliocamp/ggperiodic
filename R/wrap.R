@@ -43,6 +43,9 @@
 #'
 #' @export
 wrap <- function(object, ...) {
+  if (!is.periodic(object)) {
+    stop("object must first be periodic with periodic(object, ...)")
+  }
   UseMethod("wrap")
 }
 
