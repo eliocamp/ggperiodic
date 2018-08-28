@@ -1,7 +1,9 @@
-
+library(dplyr)
 dplyr.methods <- c("arrange", "distinct", "filter", "group_by", "mutate",
                    "rename", "sample_frac", "sample_n", "select", "slice",
                    "summarise", "ungroup", "group_vars")
+
+dplyr.exports <- c("filter")
 
 make.args <- function(args) {
   args_text <- character()
@@ -41,6 +43,14 @@ for (m in seq_along(dplyr.methods)) {
              "}",
              "")
 }
-writeLines(lines, fileConn)
 
+for (e in seq_along(dplyr.exports)) {
+  method <- dplyr.exports[e]
+  lines <- c(lines,
+             "#' @export",
+             paste0("dplyr::", method))
+
+}
+
+writeLines(lines, fileConn)
 close(fileConn)

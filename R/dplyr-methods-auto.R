@@ -115,3 +115,5 @@ group_vars.periodic_df <- function(x) {
   suppressWarnings(do.call(periodic, c(list(object = .data), periods)))
 }
 
+#' @export
+dplyr::filter
