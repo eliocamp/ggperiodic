@@ -35,7 +35,3 @@ unperiodic.default <- function(object, ...) {
   object
 }
 
-#' @export
-unperiodic.periodic_layer <- function(object, ...) {
-  object$object
-}

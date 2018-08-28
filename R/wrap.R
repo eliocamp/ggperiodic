@@ -53,11 +53,15 @@ wrap <- function(object, ...) {
 #' @export
 #' @rdname wrap
 wrap.periodic_df <- function(object, ..., .group = NULL) {
-  if (nrow(object) == 0) return(object)
+  if (nrow(object) == 0) {
+    return(object)
+  }
 
   cols <- as.list(substitute(list(...))[-1])
   .group <- substitute(.group)
-  if (!is.character(.group)) .group <- deparse(substitute(.group))
+  if (!is.null(.group) & !is.character(.group)) {
+    .group <- deparse(substitute(.group))
+  }
 
   if (length(cols) == 0) {
     wraps <- lapply(object, function(x) attr(x, "period"))
@@ -90,7 +94,6 @@ wrap.periodic_df <- function(object, ..., .group = NULL) {
   }
 
   object <- unperiodic(object)
-  attr(object, "wrapped") <- TRUE
   return(object)
 }
 

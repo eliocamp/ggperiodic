@@ -73,6 +73,8 @@ periodic.data.frame <- function(object, ...) {
                    paste0(names(cols)[!iscol], collapse= ", ")))
   }
 
+  cols <- cols[iscol]
+
   bad.cols <- vector()
   for (i in seq_along(cols)) {
     if (is.null(cols[[i]])) {

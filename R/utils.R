@@ -1,4 +1,5 @@
 
+# nocov start
 is.waive <- function (x) {
   inherits(x, "waiver")
 }
@@ -12,3 +13,4 @@ join <- function(x, y) {
   j <- c(x, y)
   j[unique(names(j))]
 }
+# nocov end

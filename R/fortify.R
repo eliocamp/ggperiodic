@@ -5,7 +5,7 @@ fortify.periodic_df <- function(data, ...) {
   .group <- call$mapping$group
   if (!is.null(.group)) .group <- as.character(.group)[[2]]
 
-  if (inherits(call$geom, "Geom") | inherits(call$geom, "Stat")) {
+  if (inherits(call$geom, "Geom") | inherits(call$stat, "Stat")) {
     params <- vector()
     if (inherits(call$geom, "Geom")) {
       # the call is from a geom
@@ -14,7 +14,7 @@ fortify.periodic_df <- function(data, ...) {
       stat <- paste0("Stat", .capitalize(stat))
       stat <- eval(as.name(stat))
       params <- c(params, stat$parameters())
-    } else if (inherits(call$geom, "Geom")) {
+    } else if (inherits(call$stat, "Stat")) {
       # the call is from a stat
       parmas <- call$stat$parameters()
       geom <- call$geom
