@@ -13,7 +13,7 @@ wrap <- function(object, ...) {
 
 #' @export
 #' @rdname wrap
-wrap.periodic_df <- function(object, ..., .group = NULL) {
+wrap.periodic_df <- function(object, ..., group = NULL) {
   if (nrow(object) == 0) return(object)
 
   cols <- as.list(substitute(list(...))[-1])
@@ -31,6 +31,14 @@ wrap.periodic_df <- function(object, ..., .group = NULL) {
     p <- parent.frame()
     wraps <- lapply(cols, function(x) eval(x, object, p))
     circular <- names(wraps)
+  }
+
+  if (".group" %in% circular) {
+    .group <- as.character(cols[[".group"]])
+    wraps <- wraps[circular != ".group"]
+    circular <- circular[circular != ".group"]
+  } else {
+    .group <- NULL
   }
 
   bad.cols <- vector()
