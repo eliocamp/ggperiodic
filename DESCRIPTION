@@ -1,6 +1,6 @@
 Package: ggperiodic
 Version: 0.0.0.9000
-Title: Easy to ploting periodic data using ggplot2
+Title: Easy ploting of periodic data with ggplot2
 Description: Implements methods to plot periodic data in any arbitrary range on the fly.
 Authors@R: person("Elio", "Campitelli", email = "elio.campitelli@cima.fcen.uba.ar", role = c("cre", "aut"))
 License: GPL-3
@@ -18,3 +18,6 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+Roxygen: list(markdown = TRUE)
+URL: https://github.com/eliocamp/ggperiodic
+BugReports: https://github.com/eliocamp/ggperiodic/issues

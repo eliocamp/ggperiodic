@@ -7,15 +7,53 @@
 \usage{
 wrap(object, ...)
 
-\method{wrap}{periodic_df}(object, ..., .group = NULL)
+\method{wrap}{periodic_df}(object, ..., group = NULL)
 }
 \arguments{
 \item{object}{a periodic data frame}
 
 \item{...}{name-value pairs of expressions defining range specifications}
 
-\item{.group}{optional group column}
+\item{.group}{optional group column (see examples)}
 }
 \description{
 Wrap periodic data to an arbitary range
+}
+\examples{
+
+x <- seq(0, 360 - 20, by = 20)
+df <- data.frame(x = x, y = cos(x*pi/180))
+df_p <- periodic(df, x = c(0, 360))
+
+# wrap in default rante
+df_wrapped <- wrap(df_p)
+range(df_wrapped$x)
+range(df$x)
+
+# specify range
+df_wrapped <- wrap(df_p, x = c(-145, 365))
+range(df_wrapped$x)
+
+# with non regular intervals
+x <- runif(30, 0, 360)
+df <- periodic(data.frame(x = x, y = cos(x*pi/180)),
+               x = c(0, 360))
+df_wrapped <- wrap(df, x = c(-180, 540))
+range(df_wrapped$x)
+range(df$x)
+
+# This example illustrates the use of the .group parameter
+library(ggplot2)
+map <- periodic(map_data("world"), long = long)
+
+# If wrapped without .group, the repated parts of the map
+# have the same group and so polygons are not correctly defined.
+ggplot(map_wrapped, aes(long, lat, group = group)) +
+    geom_path()
+
+# Using groups, you get the correct grouping.
+map_wrapped <- wrap(map, long = c(-180, 360), .group = group)
+ggplot(map_wrapped, aes(long, lat, group = group)) +
+    geom_path()
+
 }

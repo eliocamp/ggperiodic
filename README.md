@@ -1,9 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# ggperiodic
-
-<img src="other/hex.png" align="right" height=230/>
+# ggperiodic <img src="man/figures/logo.png" align="right"/>
 
 ggperiodic is an attempt to solve the issue of plotting periodic data in
 ggplot2. It automatically augments your data to wrap it around to any
