@@ -7,7 +7,7 @@
 \usage{
 wrap(object, ...)
 
-\method{wrap}{periodic_df}(object, ..., group = NULL)
+\method{wrap}{periodic_df}(object, ..., .group = NULL)
 }
 \arguments{
 \item{object}{a periodic data frame}

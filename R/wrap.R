@@ -51,7 +51,7 @@ wrap <- function(object, ...) {
 
 #' @export
 #' @rdname wrap
-wrap.periodic_df <- function(object, ..., group = NULL) {
+wrap.periodic_df <- function(object, ..., .group = NULL) {
   if (nrow(object) == 0) return(object)
 
   cols <- as.list(substitute(list(...))[-1])
