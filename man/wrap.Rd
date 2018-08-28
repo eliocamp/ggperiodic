@@ -48,6 +48,7 @@ map <- periodic(map_data("world"), long = long)
 
 # If wrapped without .group, the repated parts of the map
 # have the same group and so polygons are not correctly defined.
+map_wrapped <- wrap(map, long = c(-180, 360))
 ggplot(map_wrapped, aes(long, lat, group = group)) +
     geom_path()
 

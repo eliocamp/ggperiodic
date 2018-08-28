@@ -33,6 +33,7 @@
 #'
 #' # If wrapped without .group, the repated parts of the map
 #' # have the same group and so polygons are not correctly defined.
+#' map_wrapped <- wrap(map, long = c(-180, 360))
 #' ggplot(map_wrapped, aes(long, lat, group = group)) +
 #'     geom_path()
 #'
@@ -55,6 +56,8 @@ wrap.periodic_df <- function(object, ..., .group = NULL) {
   if (nrow(object) == 0) return(object)
 
   cols <- as.list(substitute(list(...))[-1])
+  .group <- substitute(.group)
+  if (!is.character(.group)) .group <- deparse(substitute(.group))
 
   if (length(cols) == 0) {
     wraps <- lapply(object, function(x) attr(x, "period"))
@@ -69,14 +72,6 @@ wrap.periodic_df <- function(object, ..., .group = NULL) {
     p <- parent.frame()
     wraps <- lapply(cols, function(x) eval(x, object, p))
     circular <- names(wraps)
-  }
-
-  if (".group" %in% circular) {
-    .group <- as.character(cols[[".group"]])
-    wraps <- wraps[circular != ".group"]
-    circular <- circular[circular != ".group"]
-  } else {
-    .group <- NULL
   }
 
   bad.cols <- vector()
@@ -112,7 +107,7 @@ wrap.periodic_df <- function(object, ..., .group = NULL) {
   times <- ceiling(width.w/width.p) + 1
 
   x <- data[[column]]
-  if (!is.null(group)) new_group <- data[[group]]
+  if (!is.null(group))  new_group <- data[[group]]
 
   new_x <- rep(x + shift*width.p, times = times)
   new_x <- new_x + width.p*rep(0:(times-1), each = length(x))
