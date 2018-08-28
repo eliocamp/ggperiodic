@@ -2,6 +2,7 @@
 #' @export
 #' @method rename periodic_df
 #' @importFrom dplyr rename
+#' @importFrom tidyselect vars_rename
 rename.periodic_df <- function(.data, ...) {
   periods <- get_period(.data)
   vars <- tidyselect::vars_rename(names(.data), !!!dplyr::quos(...))
@@ -17,6 +18,7 @@ rename.periodic_df <- function(.data, ...) {
 #' @export
 #' @method select periodic_df
 #' @importFrom dplyr select
+#' @importFrom tidyselect vars_rename
 select.periodic_df <- function(.data, ...) {
   periods <- get_period(.data)
   vars <- tidyselect::vars_rename(names(.data), !!!dplyr::quos(...))

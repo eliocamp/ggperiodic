@@ -11,7 +11,8 @@ Depends:
 Imports: 
     dplyr,
     ggplot2,
-    sticky
+    sticky,
+    tidyselect
 Suggests: 
     knitr,
     rmarkdown,

@@ -21,7 +21,7 @@
 #'
 #' ggplot(df_p, aes(x, y)) +
 #'    geom_line() +            # periodic data
-#'    geom_point(data = df) +  # non periodic data
+#'    geom_point(data = df)    # non periodic data
 #'
 #' # Extend domain
 #' ggplot(df_p, aes(x, y), x = c(-180, 540)) +
