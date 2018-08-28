@@ -1,4 +1,4 @@
-context("test-periodic.R")
+context("Core functions")
 
 set.seed(42)
 x <- runif(30, 0, 360)

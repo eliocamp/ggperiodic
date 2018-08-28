@@ -58,3 +58,14 @@ mutate.periodic_df <- function(.data, ...) {
   .data <- NextMethod("mutate")
   suppressWarnings(do.call(periodic, c(list(object = .data), periods)))
 }
+
+
+#' @export
+#' @method ungroup periodic_df
+#' @importFrom dplyr ungroup
+ungroup.periodic_df <- function(x, ...) {
+  periods <- get_period(x)
+  x <- unperiodic(x)
+  x <- NextMethod("ungroup")
+  suppressWarnings(do.call(periodic, c(list(object = x), periods)))
+}
