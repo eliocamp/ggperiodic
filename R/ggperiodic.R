@@ -5,4 +5,4 @@
 #'
 #' @name ggperiodic
 #' @docType package
-'_PACKAGE'
+"_PACKAGE"

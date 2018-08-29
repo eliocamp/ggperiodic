@@ -19,6 +19,9 @@ periodic(object, ...)
 
 \item{period}{a numeric vector whose range defines the period}
 }
+\value{
+An object of subclass \code{periodic_df} or \code{periodic_v}.
+}
 \description{
 Creates a periodic object by specifying the periodic variables and their
 periods.

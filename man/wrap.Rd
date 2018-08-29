@@ -16,6 +16,10 @@ wrap(object, ...)
 
 \item{.group}{optional group column (see examples)}
 }
+\value{
+An object of the same class as \code{object} but with no periodic subclass or
+periodicity specifications and wrapped dimensions.
+}
 \description{
 Wrap periodic data to an arbitrary range
 }

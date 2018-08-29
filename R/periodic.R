@@ -7,6 +7,10 @@
 #' @param ... name-value pairs of expressions defining the period
 #' @param period a numeric vector whose range defines the period
 #'
+#' @return
+#'
+#' An object of subclass `periodic_df` or `periodic_v`.
+#'
 #' @details
 #'
 #' This is a generic function and ggperiodic provides methods for vectors, data frames

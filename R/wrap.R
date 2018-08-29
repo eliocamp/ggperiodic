@@ -4,6 +4,11 @@
 #' @param ... name-value pairs of expressions defining range specifications
 #' @param .group optional group column (see examples)
 #'
+#' @return
+#'
+#' An object of the same class as `object` but with no periodic subclass or
+#' periodicity specifications and wrapped dimensions.
+#'
 #' @examples
 #'
 #' x <- seq(0, 360 - 20, by = 20)

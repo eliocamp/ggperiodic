@@ -11,6 +11,10 @@ unperiodic(object, ...)
 
 \item{...}{arguments to methods}
 }
+\value{
+An object of the same class as \code{object} but with no periodic subclass or
+periodicity specifications.
+}
 \description{
 Remove periodic specifications
 }
