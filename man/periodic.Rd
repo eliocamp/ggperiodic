@@ -13,7 +13,7 @@ periodic(object, ...)
 \method{periodic}{data.frame}(object, ...)
 }
 \arguments{
-\item{object}{the object to coherce to periodic}
+\item{object}{the object to coerce to periodic}
 
 \item{...}{name-value pairs of expressions defining the period}
 

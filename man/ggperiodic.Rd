@@ -4,7 +4,7 @@
 \name{ggperiodic}
 \alias{ggperiodic}
 \alias{ggperiodic-package}
-\title{ggperiodic: Easy ploting of periodic data with ggplot2}
+\title{ggperiodic: Easy plotting of periodic data with ggplot2}
 \description{
 \if{html}{\figure{logo.png}{options: align='right'}}
 

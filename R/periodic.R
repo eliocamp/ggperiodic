@@ -3,7 +3,7 @@
 #' Creates a periodic object by specifying the periodic variables and their
 #' periods.
 #'
-#' @param object the object to coherce to periodic
+#' @param object the object to coerce to periodic
 #' @param ... name-value pairs of expressions defining the period
 #' @param period a numeric vector whose range defines the period
 #'

@@ -3,7 +3,7 @@
 \name{wrap}
 \alias{wrap}
 \alias{wrap.periodic_df}
-\title{Wrap periodic data to an arbitary range}
+\title{Wrap periodic data to an arbitrary range}
 \usage{
 wrap(object, ...)
 
@@ -17,7 +17,7 @@ wrap(object, ...)
 \item{.group}{optional group column (see examples)}
 }
 \description{
-Wrap periodic data to an arbitary range
+Wrap periodic data to an arbitrary range
 }
 \examples{
 
@@ -41,7 +41,7 @@ df <- periodic(data.frame(x = x, y = cos(x*pi/180)),
 df_wrapped <- wrap(df, x = c(-180, 540))
 range(df_wrapped$x)
 range(df$x)
-
+\dontrun{
 # This example illustrates the use of the .group parameter
 library(ggplot2)
 map <- periodic(map_data("world"), long = long)
@@ -56,5 +56,5 @@ ggplot(map_wrapped, aes(long, lat, group = group)) +
 map_wrapped <- wrap(map, long = c(-180, 360), .group = group)
 ggplot(map_wrapped, aes(long, lat, group = group)) +
     geom_path()
-
+}
 }

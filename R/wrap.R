@@ -1,4 +1,4 @@
-#' Wrap periodic data to an arbitary range
+#' Wrap periodic data to an arbitrary range
 #'
 #' @param object a periodic data frame
 #' @param ... name-value pairs of expressions defining range specifications
@@ -26,7 +26,7 @@
 #' df_wrapped <- wrap(df, x = c(-180, 540))
 #' range(df_wrapped$x)
 #' range(df$x)
-#'
+#' \dontrun{
 #' # This example illustrates the use of the .group parameter
 #' library(ggplot2)
 #' map <- periodic(map_data("world"), long = long)
@@ -41,7 +41,7 @@
 #' map_wrapped <- wrap(map, long = c(-180, 360), .group = group)
 #' ggplot(map_wrapped, aes(long, lat, group = group)) +
 #'     geom_path()
-#'
+#'}
 #' @export
 wrap <- function(object, ...) {
   if (!is.periodic(object)) {
