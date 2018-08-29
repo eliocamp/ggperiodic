@@ -49,7 +49,7 @@ ggplot(Z, aes(x, y, z = z, color = ..level..)) +
   coord_polar()
 ```
 
-<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="70%" />
 
 With ggperiodic you can define the periodic dimensions and ggplot2 does
 the rest.
@@ -68,4 +68,4 @@ ggplot(Z, aes(x, y, color = ..level..)) +
   coord_polar()
 ```
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="70%" />
