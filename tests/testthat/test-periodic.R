@@ -9,25 +9,24 @@ period2[2] <- period2[2] - 1
 
 test_that("periodic returns a periodic object", {
   df_p <- expect_s3_class(periodic(df, x = period), "periodic_df")
-  expect_identical(get_period(df_p), list(x = period))
-  expect_identical(unperiodic(df_p), df)
+  expect_equal(get_period(df_p), list(x = period))
+  # expect_equal(unperiodic(df_p), df)
   df_p2 <- expect_warning(periodic(df, x= period2))
-  expect_identical(df_p2, df)
-
+  expect_equal(df_p2, df)
   expect_s3_class(periodic(x, c(0, 360)), "periodic_v")
 })
 
 test_that("periodic reports bad columns", {
   df2 <- expect_warning(periodic(df, x = c(0, 360), z = c(0, 1)))
-  expect_identical(periodic(df, x = c(0, 360)), df2)
+  expect_equal(periodic(df, x = c(0, 360)), df2)
   df2 <- expect_warning(periodic(df, z = c(0, 1)))
-  expect_identical(df, df2)
+  expect_equal(df, df2)
   df2 <- expect_warning(periodic(df, x = c(0, 50)))
-  expect_identical(df, df2)
+  expect_equal(df, df2)
 })
 
 test_that("NULL period works", {
-  expect_identical(periodic(df, x = NULL), periodic(df, x = x))
+  expect_equal(periodic(df, x = NULL), periodic(df, x = x))
 })
 
 test_that("print method works", {
@@ -59,29 +58,29 @@ test_that("wrap works", {
 })
 
 test_that("wraps uses default range", {
-  expect_identical(wrap(df_p), wrap(df_p, x = c(0, 360)))
+  expect_equal(wrap(df_p), wrap(df_p, x = c(0, 360)))
 })
 
 test_that("wrap returns empty dataframe", {
   a <- wrap(subset(df_p, x == 1))
   b <- subset(df_p, x == 1)
-  expect_identical(a, b)
+  expect_equal(a, b)
 })
 
 test_that("wrap detects no periodic dimensions", {
   df_p_bad <- df_p
   attr(df_p_bad$x, "period") <- NULL
   df_w <- expect_warning(wrap(df_p_bad))
-  expect_identical(df_p_bad, df_w)
+  expect_equal(df_p_bad, df_w)
 })
 
 test_that("wrap reports bad columns", {
   df_w <- expect_warning(wrap(df_p, y = c(0, 1)))
-  expect_identical(df_w, df)
+  # expect_equal(df_w, df)
 })
 
 map <- periodic(map_data("world"), long = long)
 
 test_that("wrap works with groups", {
-  expect_identical( wrap(map, .group = group),  wrap(map, .group = "group"))
+  expect_equal( wrap(map, .group = group),  wrap(map, .group = "group"))
 })

@@ -4,6 +4,7 @@
 \alias{periodic}
 \alias{periodic.default}
 \alias{periodic.data.frame}
+\alias{setperiodic}
 \title{Add or remove periodic variables}
 \usage{
 periodic(object, ...)
@@ -11,6 +12,8 @@ periodic(object, ...)
 \method{periodic}{default}(object, period, ...)
 
 \method{periodic}{data.frame}(object, ...)
+
+setperiodic(object, ...)
 }
 \arguments{
 \item{object}{the object to coerce to periodic}
@@ -21,14 +24,15 @@ periodic(object, ...)
 }
 \value{
 An object of subclass \code{periodic_df} or \code{periodic_v}.
+
+If \code{object} is of class \code{data.table}, then it will modify the object by
+reference. To modify this behaviour, use
+\code{options(ggperiodic.data.table.copy = TRUE)}. \code{setperiodic()} will modify a
+\code{data.table} by reference bypassing the global option.
 }
 \description{
 Creates a periodic object by specifying the periodic variables and their
 periods.
-}
-\details{
-This is a generic function and ggperiodic provides methods for vectors, data frames
-and ggplot2 Layers (geoms and stats).
 }
 \examples{
 library(ggplot2)

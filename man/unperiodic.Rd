@@ -2,9 +2,12 @@
 % Please edit documentation in R/unperiodic.R
 \name{unperiodic}
 \alias{unperiodic}
+\alias{setunperiodic}
 \title{Remove periodic specifications}
 \usage{
 unperiodic(object, ...)
+
+setunperiodic(object, ...)
 }
 \arguments{
 \item{object}{the object to remove periodicities}
@@ -14,6 +17,11 @@ unperiodic(object, ...)
 \value{
 An object of the same class as \code{object} but with no periodic subclass or
 periodicity specifications.
+
+If \code{object} is of class \code{data.table}, then it will modify the object by
+reference. To modify this behaviour, use
+\code{options(ggperiodic.data.table.copy = TRUE)}. \code{setperiodic()} will modify a
+\code{data.table} by reference bypassing the global option.
 }
 \description{
 Remove periodic specifications
