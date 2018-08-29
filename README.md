@@ -7,7 +7,7 @@
 status](https://travis-ci.org/eliocamp/ggperiodic.svg?branch=master)](https://travis-ci.org/eliocamp/ggperiodic)
 [![Coverage
 status](https://codecov.io/gh/eliocamp/ggperiodic/branch/master/graph/badge.svg)](https://codecov.io/github/eliocamp/ggperiodic?branch=master)
-![CRAN status](https://www.r-pkg.org/badges/version/ggperiodic)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/ggperiodic)](https://cran.r-project.org/package=ggperiodic)
 
 ggperiodic is an attempt to solve the issue of plotting periodic data in
 ggplot2. It automatically augments your data to wrap it around to any
