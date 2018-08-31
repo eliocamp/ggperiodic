@@ -23,12 +23,19 @@ ggperiodic is an attempt to solve the issue of plotting periodic data in ggplot2
 
 ## Installation
 
-You can install the development version from [GitHub](https://github.com/) with:
+You can install the latest version from CRAN with
+
+``` r
+install.packages("ggperiodic")
+```
+
+Or you can install the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("eliocamp/ggperiodic")
 ```
+
 ## Example
 
 Let's create some artificial data with periodic domain
