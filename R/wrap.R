@@ -108,13 +108,13 @@ wrap.periodic_df <- function(object, ..., .group = NULL) {
 
   width.w <- diff(range(wrap))
   width.p <- diff(range(period))
+  x <- data[[column]]
 
-  shift <- (min(wrap) - start.p)/width.p
+  shift <- (min(wrap) - min(x))/width.p
   shift <- floor(shift)
 
   times <- ceiling(width.w/width.p) + 1
 
-  x <- data[[column]]
   if (!is.null(group))  new_group <- data[[group]]
 
   new_x <- rep(x + shift*width.p, times = times)

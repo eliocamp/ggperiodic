@@ -1,8 +1,11 @@
 # ggperiodic 0.1.9000
 
-* By default `periodic()` and `unperiodic()` will modify by reference if 
-`object` is a `data.table`. To modify this behaviour, use 
-`options(ggperiodic.data.table.copy = TRUE)`.
+* Fixed a nasty bug in the implementation of `wrap()`.
+
+* New functions, `setperiodic()` and `setunperiodic()` that modify objects
+by refference. `periodic()` and `unperiodic()` can modify `data.table`s by
+reference also by setting `options(ggperiodic.data.table.copy = TRUE)` 
+
 
 # ggperiodic 0.1.0
 
