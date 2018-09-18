@@ -55,6 +55,7 @@ wrap <- function(object, ...) {
   UseMethod("wrap")
 }
 
+
 #' @export
 #' @rdname wrap
 wrap.periodic_df <- function(object, ..., .group = NULL) {
@@ -138,9 +139,4 @@ wrap.periodic_df <- function(object, ..., .group = NULL) {
   return(data)
 }
 
-#' #' @export
-#' #' @rdname wrap
-#' wrap.Layer <- function(object, ...) {
-#'   cols <- as.list(substitute(list(...))[-1])
-#'   structure(list(layer = object, cols = cols), class = "periodic_layer")
-#' }
+
