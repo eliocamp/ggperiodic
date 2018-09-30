@@ -127,12 +127,14 @@ periodic.data.frame <- function(object, ...) {
 
 #' @export
 print.periodic_df <- function(x, ...) {
-  NextMethod("print")
-  period <- get_period(x)
-  for (i in seq_along(period)) {
-    cat(names(period)[i], " = [", period[[i]][1] , "; ",
-        period[[i]][2], "]\n",
-        sep = "")
+  if (data.table::shouldPrint(x)) {
+    NextMethod("print")
+    period <- get_period(x)
+    for (i in seq_along(period)) {
+      cat(names(period)[i], " = [", period[[i]][1] , "; ",
+          period[[i]][2], "]\n",
+          sep = "")
+    }
   }
 }
 
