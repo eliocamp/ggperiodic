@@ -6,6 +6,8 @@
 by refference. `periodic()` and `unperiodic()` can modify `data.table`s by
 reference also by setting `options(ggperiodic.data.table.copy = TRUE)` 
 
+* New `qwrap()` function for quickly wraping to any range.
+
 
 # ggperiodic 0.1.0
 
