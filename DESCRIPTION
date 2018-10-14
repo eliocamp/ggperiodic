@@ -1,7 +1,8 @@
 Package: ggperiodic
 Title: Easy Plotting of Periodic Data with 'ggplot2'
 Version: 0.1.0.9000
-Authors@R: person("Elio", "Campitelli", email = "elio.campitelli@cima.fcen.uba.ar", role = c("cre", "aut"))
+Authors@R: person("Elio", "Campitelli", email = "elio.campitelli@cima.fcen.uba.ar", 
+                  role = c("cre", "aut"), comment = c(ORCID = "https://orcid.org/0000-0002-7742-9230"))
 Description: Implements methods to plot periodic data in any arbitrary range on the fly.
 License: GPL-3
 URL: https://github.com/eliocamp/ggperiodic
