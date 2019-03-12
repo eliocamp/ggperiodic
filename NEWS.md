@@ -1,12 +1,17 @@
 # ggperiodic 0.1.9000
 
-* Fixed a nasty bug in the implementation of `wrap()`.
+## New Features
 
-* New functions, `setperiodic()` and `setunperiodic()` that modify objects
+* `setperiodic()` and `setunperiodic()` modify objects
 by refference. `periodic()` and `unperiodic()` can modify `data.table`s by
 reference also by setting `options(ggperiodic.data.table.copy = TRUE)` 
 
 * New `qwrap()` function for quickly wraping to any range.
+
+
+## Bug Fixes
+
+* Fixed a nasty bug in the implementation of `wrap()`.
 
 
 # ggperiodic 0.1.0
@@ -14,3 +19,4 @@ reference also by setting `options(ggperiodic.data.table.copy = TRUE)`
 * Implemented `dplyr` methods. 
 * Published on github
 * Added a `NEWS.md` file to track changes to the package.
+
