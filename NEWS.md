@@ -3,7 +3,7 @@
 ## New Features
 
 * `setperiodic()` and `setunperiodic()` modify objects
-by refference. `periodic()` and `unperiodic()` can modify `data.table`s by
+by reference. `periodic()` and `unperiodic()` can modify `data.table`s by
 reference also by setting `options(ggperiodic.data.table.copy = TRUE)` 
 
 * New `qwrap()` function for quickly wraping to any range.
