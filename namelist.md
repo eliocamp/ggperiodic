@@ -17,7 +17,7 @@
     
 * Milankovitch cycles
 
-* Möbius strip
+* 
 
 * Sunspot cycle
 
@@ -25,3 +25,11 @@
 
 
 [More cycles](https://en.wikipedia.org/wiki/List_of_cycles)
+
+## Others
+
+* Jörmungandr
+
+# Used
+
+* Möbius strip (v0.1.0)

@@ -1,4 +1,4 @@
-# ggperiodic 0.1.9000
+# ggperiodic 1.0.0 - Jörmungandr
 
 ## New Features
 
@@ -8,13 +8,11 @@ reference also by setting `options(ggperiodic.data.table.copy = TRUE)`
 
 * New `qwrap()` function for quickly wraping to any range.
 
-
 ## Bug Fixes
 
 * Fixed a nasty bug in the implementation of `wrap()`.
 
-
-# ggperiodic 0.1.0
+# ggperiodic 0.1.0 - Möbius strip
 
 * Implemented `dplyr` methods. 
 * Published on github
