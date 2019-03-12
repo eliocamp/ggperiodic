@@ -28,8 +28,10 @@
 
 ## Others
 
-* Jörmungandr
+
 
 # Used
 
 * Möbius strip (v0.1.0)
+
+* Jörmungandr (v1.0.0)
