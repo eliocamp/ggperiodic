@@ -19,8 +19,7 @@ Suggests:
     knitr,
     maps,
     rmarkdown,
-    testthat,
-    vdiffr
+    testthat
 VignetteBuilder: knitr
 ByteCompile: true
 Encoding: UTF-8
