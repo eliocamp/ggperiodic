@@ -1,3 +1,7 @@
+# ggperiodic 1.0.1
+
+* Removes vdiffr from dependencies.
+
 # ggperiodic 1.0.0 - Jörmungandr
 
 ## New Features
