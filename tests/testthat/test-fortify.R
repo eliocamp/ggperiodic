@@ -4,8 +4,8 @@ set.seed(42)
 x <- seq(0, 360 - 10, by = 10)
 df <- data.frame(x = x, y = cos(x*pi/180))
 library(ggplot2)
-library(vdiffr)
-library(maps)
+
+# library(maps)
 
 map <- periodic(map_data("world"), long = long)
 
