@@ -6,7 +6,7 @@
 \alias{ggperiodic-package}
 \title{ggperiodic: Easy Plotting of Periodic Data with 'ggplot2'}
 \description{
-\if{html}{\figure{logo.png}{options: align='right'}}
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
 Implements methods to plot periodic data in any arbitrary range on the fly.
 }
@@ -26,6 +26,6 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Elio Campitelli \email{elio.campitelli@cima.fcen.uba.ar} (https://orcid.org/0000-0002-7742-9230)
+\strong{Maintainer}: Elio Campitelli \email{elio.campitelli@cima.fcen.uba.ar} (\href{https://orcid.org/0000-0002-7742-9230}{ORCID})
 
 }
