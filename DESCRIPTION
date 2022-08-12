@@ -1,6 +1,6 @@
 Package: ggperiodic
 Title: Easy Plotting of Periodic Data with 'ggplot2'
-Version: 1.0.1
+Version: 1.0.2
 Authors@R: person("Elio", "Campitelli", email = "elio.campitelli@cima.fcen.uba.ar", 
                   role = c("cre", "aut"), comment = c(ORCID = "https://orcid.org/0000-0002-7742-9230"))
 Description: Implements methods to plot periodic data in any arbitrary range on the fly.
@@ -24,4 +24,4 @@ ByteCompile: true
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.1

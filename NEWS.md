@@ -1,3 +1,7 @@
+# ggperiodic 1.0.2
+
+* Updates documentation to CRAN HTML5 format
+
 # ggperiodic 1.0.1
 
 * Removes vdiffr from dependencies.

@@ -6,7 +6,7 @@
 \alias{ggperiodic-package}
 \title{ggperiodic: Easy Plotting of Periodic Data with 'ggplot2'}
 \description{
-\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
 Implements methods to plot periodic data in any arbitrary range on the fly.
 }
