@@ -11,14 +11,17 @@ fortify.periodic_df <- function(data, ...) {
       # the call is from a geom
       params <- call$geom$parameters()
       stat <- call$stat
-      stat <- paste0("Stat", .capitalize(stat))
-      stat <- eval(as.name(stat))
+      if (is.character(stat)) {
+        stat <- paste0("Stat", .capitalize(.camelize(stat)))
+        stat <- eval(as.name(stat))
+      }
+
       params <- c(params, stat$parameters())
     } else if (inherits(call$stat, "Stat")) {
       # the call is from a stat
       parmas <- call$stat$parameters()
       geom <- call$geom
-      geom <- paste0("Geom", .capitalize(geom))
+      geom <- paste0("Geom", .capitalize(.camelize(geom)))
       geom <- eval(as.name(geom))
       params <- c(params, geom$parameters())
     }

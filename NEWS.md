@@ -1,3 +1,7 @@
+# ggperiodic 1.0.3
+
+* Improves detection of geoms and stats
+
 # ggperiodic 1.0.2
 
 * Updates documentation to CRAN HTML5 format
