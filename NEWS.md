@@ -1,4 +1,4 @@
-# ggperiodic 1.0.3
+# ggperiodic (development version)
 
 * Improves detection of geoms and stats
 
