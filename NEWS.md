@@ -2,6 +2,8 @@
 
 * Improves detection of geoms and stats
 
+* Fixes CRAN Warnings related to methods consistency. 
+
 # ggperiodic 1.0.2
 
 * Updates documentation to CRAN HTML5 format
