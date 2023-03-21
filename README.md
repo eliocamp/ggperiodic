@@ -7,7 +7,7 @@
 status](https://travis-ci.org/eliocamp/ggperiodic.svg?branch=master)](https://travis-ci.org/eliocamp/ggperiodic)
 [![Coverage
 status](https://codecov.io/gh/eliocamp/ggperiodic/branch/master/graph/badge.svg)](https://codecov.io/github/eliocamp/ggperiodic?branch=master)
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/ggperiodic)](https://cran.r-project.org/package=ggperiodic)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/ggperiodic)](https://cran.r-project.org/package=ggperiodic)
 
 ggperiodic is an attempt to solve the issue of plotting periodic data in
 ggplot2. It automatically augments your data to wrap it around to any
@@ -53,6 +53,11 @@ library(ggplot2)
 ggplot(Z, aes(x, y, z = z, color = ..level..)) +
   geom_contour() +
   coord_polar()
+#> Warning: The dot-dot notation (`..level..`) was deprecated in ggplot2 3.4.0.
+#> ℹ Please use `after_stat(level)` instead.
+#> This warning is displayed once every 8 hours.
+#> Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+#> generated.
 ```
 
 <img src="man/figures/README-unnamed-chunk-2-1.png" width="70%" />

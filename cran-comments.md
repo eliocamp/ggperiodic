@@ -1,6 +1,9 @@
 
-This release only updates the documentation to conform to the new CRAN HTML5 format. 
+Tested in :
 
+* Local installation Ubuntu 20.04.5 LTS - Linux 5.15.0-67-generic - R version 4.2.1
 
-Cheeers!
-Elio
+## R CMD check results
+
+0 errors | 0 warnings | 0 notes
+

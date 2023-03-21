@@ -51,7 +51,7 @@ sample_frac.periodic_df <- function(tbl, size = 1, replace = FALSE, weight = NUL
 #' @export
 #' @method sample_n periodic_df
 #' @importFrom dplyr sample_n
-sample_n.periodic_df <- function(tbl, size, replace = FALSE, weight = NULL, .env = NULL) {
+sample_n.periodic_df <- function(tbl, size, replace = FALSE, weight = NULL, .env = NULL, ...) {
   periods <- get_period(.data)
   .data <- unperiodic(.data)
   .data <- NextMethod("sample_n")
