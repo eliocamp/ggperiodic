@@ -99,7 +99,6 @@ periodic.data.frame <- function(object, ...) {
       data.table::setattr(object[[names(cols)[i]]], "period", period)
       if (!inherits(object[[names(cols)[i]]], "sticky")) {
         data.table::setattr(object[[names(cols)[i]]], "class", c("sticky", class(object[[names(cols)[i]]])))
-        # class(object[[names(cols)[i]]]) <- c("sticky", class(object[[names(cols)[i]]]))
       }
     }
   }
