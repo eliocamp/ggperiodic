@@ -34,14 +34,14 @@ unperiodic.periodic_df <- function(object, ...) {
   }
 
   for (i in seq_along(cols)) {
-    data.table::setattr(object[[cols[i]]], "period", NULL)
-    data.table::setattr(object[[cols[i]]], "class", class(object[[cols[i]]])[class(object[[cols[i]]]) != "sticky"])
-    data.table::setattr(object, "class", class(object)[class(object) != "periodic_df"])
-
-    # class(object[[cols[i]]]) <- class(object[[cols[i]]])[class(object[[cols[i]]]) != "sticky"]
-    # class(object) <- class(object)[class(object) != "periodic_df"]
+    if (inherits(object[[cols[i]]], "sticky")) {
+      data.table::setattr(object[[cols[i]]], "period", NULL)
+      data.table::setattr(object[[cols[i]]], "class", setdiff(class(object[[cols[i]]]), "sticky"))
+    }
   }
 
+  data.table::setattr(object, "class", setdiff(class(object), "periodic_df"))
+  # browser()
   if (.should.copy(object)) {
     return(object)
   } else {
