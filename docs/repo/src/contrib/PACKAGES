@@ -1,9 +1,7 @@
-Package: data.table
-Version: 1.14.8
-Depends: R (>= 3.1.0)
-Imports: methods
-Suggests: bit64 (>= 4.0.0), bit (>= 4.0.4), curl, R.utils, xts,
-       nanotime, zoo (>= 1.8-1), yaml, knitr, rmarkdown
-License: MPL-2.0 | file LICENSE
-MD5sum: 8a3cfcd502c51cfb6b96028a0b2827a1
-NeedsCompilation: yes
+Package: ggperiodic
+Version: 1.0.3.9000
+Imports: dplyr, ggplot2, sticky, tidyselect, data.table
+Suggests: covr, knitr, maps, rmarkdown, testthat
+License: GPL-3
+MD5sum: 42f98862d0fe5f7487f5a5fc2a248d42
+NeedsCompilation: no
