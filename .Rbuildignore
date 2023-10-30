@@ -9,3 +9,6 @@
 ^codecov\.yml$
 ^cran-comments\.md$
 ^README-.*\.png$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
