@@ -3,8 +3,6 @@
 
 # ggperiodic <img src="man/figures/logo.png" align="right"/>
 
-[![Travis build
-status](https://travis-ci.org/eliocamp/ggperiodic.svg?branch=master)](https://travis-ci.org/eliocamp/ggperiodic)
 [![Coverage
 status](https://codecov.io/gh/eliocamp/ggperiodic/branch/master/graph/badge.svg)](https://codecov.io/github/eliocamp/ggperiodic?branch=master)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/ggperiodic)](https://cran.r-project.org/package=ggperiodic)
@@ -53,14 +51,9 @@ library(ggplot2)
 ggplot(Z, aes(x, y, z = z, color = ..level..)) +
   geom_contour() +
   coord_polar()
-#> Warning: The dot-dot notation (`..level..`) was deprecated in ggplot2 3.4.0.
-#> ℹ Please use `after_stat(level)` instead.
-#> This warning is displayed once every 8 hours.
-#> Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
-#> generated.
 ```
 
-<img src="man/figures/README-unnamed-chunk-2-1.png" width="70%" />
+<img src="man/figures/README-unnamed-chunk-2-1.png" alt="" width="70%" />
 
 With ggperiodic you can define the periodic dimensions and ggplot2 does
 the rest.
@@ -79,4 +72,4 @@ ggplot(Z, aes(x, y, color = ..level..)) +
   coord_polar()
 ```
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="70%" />
+<img src="man/figures/README-unnamed-chunk-3-1.png" alt="" width="70%" />

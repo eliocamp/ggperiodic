@@ -10,12 +10,12 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.path = "man/figures/README-",
   out.width = "70%",
-  cache = FALSE
+  cache = FALSE, 
+  warning = FALSE
 )
 ```
 # ggperiodic <img src="man/figures/logo.png" align="right"/>
 
-[![Travis build status](https://travis-ci.org/eliocamp/ggperiodic.svg?branch=master)](https://travis-ci.org/eliocamp/ggperiodic)
 [![Coverage status](https://codecov.io/gh/eliocamp/ggperiodic/branch/master/graph/badge.svg)](https://codecov.io/github/eliocamp/ggperiodic?branch=master)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/ggperiodic)](https://cran.r-project.org/package=ggperiodic)
 
