@@ -4,7 +4,7 @@
 # ggperiodic <img src="man/figures/logo.png" align="right"/>
 
 [![Coverage
-status](https://codecov.io/gh/eliocamp/ggperiodic/branch/master/graph/badge.svg)](https://codecov.io/github/eliocamp/ggperiodic?branch=master)
+status](https://codecov.io/gh/eliocamp/ggperiodic/branch/master/graph/badge.svg)](https://app.codecov.io/github/eliocamp/ggperiodic?branch=master)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/ggperiodic)](https://cran.r-project.org/package=ggperiodic)
 
 ggperiodic is an attempt to solve the issue of plotting periodic data in
