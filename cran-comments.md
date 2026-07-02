@@ -1,7 +1,6 @@
 
-Tested in :
-
-* Local installation Ubuntu 20.04.5 LTS - Linux 5.15.0-67-generic - R version 4.2.1
+This is an update to change the email address, since I no longer have access to the previous one. 
+No code has been changed; CRAN checks are al OK. 
 
 ## R CMD check results
 
