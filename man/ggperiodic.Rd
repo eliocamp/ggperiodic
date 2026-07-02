@@ -2,8 +2,8 @@
 % Please edit documentation in R/ggperiodic.R
 \docType{package}
 \name{ggperiodic}
-\alias{ggperiodic}
 \alias{ggperiodic-package}
+\alias{ggperiodic}
 \title{ggperiodic: Easy Plotting of Periodic Data with 'ggplot2'}
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
@@ -26,6 +26,11 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Elio Campitelli \email{elio.campitelli@cima.fcen.uba.ar} (\href{https://orcid.org/0000-0002-7742-9230}{ORCID})
+\strong{Maintainer}: Elio Campitelli \email{eliocampitelli@gmail.com} (\href{https://orcid.org/0000-0002-7742-9230}{ORCID})
+
+Authors:
+\itemize{
+  \item Elio Campitelli \email{eliocampitelli@gmail.com} (\href{https://orcid.org/0000-0002-7742-9230}{ORCID})
+}
 
 }
