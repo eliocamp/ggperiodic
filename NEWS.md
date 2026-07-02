@@ -1,5 +1,7 @@
 # ggperiodic (development version)
 
+* Update to CRAN email address. 
+
 # ggperiodic 1.0.3
 
 * Improves detection of geoms and stats
